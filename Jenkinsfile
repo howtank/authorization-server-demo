@@ -59,22 +59,22 @@ pipeline {
         }
 
 
-        stage ('Verify application started') {
-            options {
-                timeout(time: 300, unit: 'SECONDS')
-            }
+        // stage ('Verify application started') {
+        //     options {
+        //         timeout(time: 300, unit: 'SECONDS')
+        //     }
 
-            steps {
-                    waitUntil {
-                        script {
-                            def APP_HOSTNAME = params.ENVIRONMENT == 'prod' ? 'www.howtank.com' : "oauth.howtank.ninja";
+        //     steps {
+        //             waitUntil {
+        //                 script {
+        //                     def APP_HOSTNAME = params.ENVIRONMENT == 'prod' ? 'www.howtank.com' : "oauth.howtank.ninja";
 
-                            def exitCode = sh(returnStatus: true, script: "curl -s --head --request GET  https://oauth.howtank.ninja | grep -o 'HTTP/1.1 200'")
-                            return exitCode == 0
-                        }
-                    }
-                }
-        }
+        //                     def exitCode = sh(returnStatus: true, script: "curl -s --head --request GET  https://oauth.howtank.ninja | grep -o 'HTTP/1.1 200'")
+        //                     return exitCode == 0
+        //                 }
+        //             }
+        //         }
+        // }
     }
 
 
