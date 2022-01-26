@@ -1,0 +1,25 @@
+{
+  "name": "authorization-server-demo",
+  "version": "1.0.0",
+  "description": "Authentication server demo with howtank",
+  "main": "index.js",
+  "engines": {
+    "node": "^16.13.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/howtank/authorization-server-demo.git"
+  },
+  "author": "Jean-Paul Banchon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/howtank/authorization-server-demo/issues"
+  },
+  "homepage": "https://github.com/howtank/authorization-server-demo#readme",
+  "dependencies": {
+    "oidc-provider": "^7.10.6"
+  }
+}
