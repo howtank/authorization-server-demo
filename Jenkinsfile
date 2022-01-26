@@ -35,7 +35,7 @@ pipeline {
             steps {
                 parallel(
                     java: {
-                        sh label: "transfer files", script: "rsync -av --delete $WORKSPACE/ /data/docker/authorization-server-demo/"
+                        sh label: "transfer files", script: "rsync -av --delete --exclude .git $WORKSPACE/ /data/docker/authorization-server-demo/"
                     }
                 )
             }
