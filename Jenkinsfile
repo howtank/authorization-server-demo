@@ -5,7 +5,7 @@ pipeline {
         parallelsAlwaysFailFast()
     }
 
-    // parameters {
+    parameters {
     //     choice(
     //         name: 'ENVIRONMENT',
     //         choices: ['staging', 'prod'],
