@@ -6,6 +6,7 @@ const configuration = {
 		token_endpoint_auth_method: 'none',
 		response_types: ['id_token'],
 		grant_types: ['implicit'],
+		token_endpoint_auth_method: 'none',
 
 		// hardcoded for the example only
     client_id: 'id_provided_by_howtank',
