@@ -10,6 +10,9 @@ const configuration = {
     client_id: 'id_provided_by_howtank',
     redirect_uris: ['https://jwt.io'],
   }],
+  claims: {
+    user: ['pseudo', 'first_name', 'last_name', 'email', 'birthdate', 'picture']
+  }
 };
 
 const oidc = new Provider('http://localhost:3000', configuration);
