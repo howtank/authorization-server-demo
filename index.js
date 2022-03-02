@@ -9,9 +9,35 @@ const configuration = {
 
     client_id: 'id_provided_by_howtank',
     redirect_uris: ['https://jwt.io'],
+    scope: 'openid profile email',
   }],
+  features: {
+    claimsParameter: { enabled: true },
+    clientCredentials: { enabled: true },
+    introspection: { enabled: true },
+  },
   claims: {
-    user: ['pseudo', 'first_name', 'last_name', 'email', 'birthdate', 'picture']
+    email: ['email'],
+    profile: ['pseudo', 'first_name', 'last_name', 'birthdate', 'picture']
+  },
+  routes: {
+    jwks: '/.well-known/jwks.json',
+  },
+  async findAccount(ctx, id) {
+    return {
+      accountId: id,
+      async claims(use, scope) {
+        return {
+          sub: id,
+          email: "foobar@foo.com",
+          pseudo: id,
+          first_name: "foo",
+          last_name: "bar",
+          birthdate: "1970-01-01",
+          picture: "azertyuiop",
+        }
+      }
+    }
   }
 };
 
