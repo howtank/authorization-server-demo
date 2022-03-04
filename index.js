@@ -21,7 +21,7 @@ const configuration = {
     profile: ['pseudo', 'first_name', 'last_name', 'birthdate', 'picture']
   },
   routes: {
-    jwks: '/.well-known/jwks.json',
+    // jwks: '/.well-known/jwks.json',
   },
   async findAccount(ctx, id) {
     return {
