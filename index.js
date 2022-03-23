@@ -1,6 +1,6 @@
 const { Provider } = require('oidc-provider');
 
-const LISTENING_PORT = 3060;
+const LISTENING_PORT = 3000;
 
 const configuration = {
   clients: [{
