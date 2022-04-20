@@ -21,6 +21,15 @@ const configuration = {
     client_id: 'howtank',
     redirect_uris: ['https://community.papote.co'],
     scope: 'openid profile email',
+  }, {
+		application_type: 'web',
+		token_endpoint_auth_method: 'none',
+		response_types: ['id_token'],
+		grant_types: ['implicit'],
+
+    client_id: 'ejpTQ9jx6bJd',
+    redirect_uris: ['https://ent.espacejapon.com/community/'],
+    scope: 'openid profile email',
   }],
   features: {
     claimsParameter: { enabled: true },
