@@ -6,6 +6,17 @@ const configuration = {
   clients: [{
 		application_type: 'web',
 		token_endpoint_auth_method: 'none',
+    id_token_signed_response_alg: 'HS256',
+		response_types: ['id_token'],
+		grant_types: ['implicit'],
+
+    client_id: 'test_hs256',
+    client_secret: '57e6e71d9431dfab4fd2b07221a60ae57dddddf1d72b8e3516df22655b3774fe',
+    redirect_uris: ['https://jwt.io'],
+    scope: 'openid profile email',
+  }, {
+		application_type: 'web',
+		token_endpoint_auth_method: 'none',
 		response_types: ['id_token'],
 		grant_types: ['implicit'],
 
@@ -43,6 +54,9 @@ const configuration = {
   },
   routes: {
     // jwks: '/.well-known/jwks.json',
+  },
+  enabledJWA: {
+    idTokenSigningAlgValues: ['RS256', 'HS256'],
   },
   async findAccount(ctx, id) {
     return {
