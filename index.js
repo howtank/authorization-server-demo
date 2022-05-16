@@ -12,7 +12,7 @@ const configuration = {
 
     client_id: 'test_hs256',
     client_secret: '57e6e71d9431dfab4fd2b07221a60ae57dddddf1d72b8e3516df22655b3774fe',
-    redirect_uris: ['https://jwt.io'],
+    redirect_uris: ['https://jwt.io', 'https://community.papote.co'],
     scope: 'openid profile email',
   }, {
 		application_type: 'web',
