@@ -30,7 +30,7 @@ const configuration = {
 		grant_types: ['implicit'],
 
     client_id: 'howtank',
-    redirect_uris: ['https://community.papote.co', 'https://local.howtank.ninja'],
+    redirect_uris: ['https://community.papote.co', 'https://local.howtank.ninja/live'],
     scope: 'openid profile email',
   }, {
 		application_type: 'web',
